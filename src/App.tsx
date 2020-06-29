@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {createGlobalStyle} from "styled-components";
+import Number from "./Number";
 
 //App에 state값을 알려주기 위한 용도.
 interface IState {
@@ -18,8 +19,8 @@ class App extends Component<{}, IState> {
         //this로 state 값 받아서 사용
         const {counter} = this.state;
         //render가 실행되고 return값으로 html 객체를 리턴해줌.
-        return <div>{counter}
-            <button onClick={this.add}>Add</button>
+        return <div>
+            <Number count={counter}/><button onClick={this.add}>Add</button>
             <button onClick={this.minus}>Minus</button>
         </div>
     }
